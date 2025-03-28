@@ -15,7 +15,7 @@ const Sidebar = () => {
                     <li>
                         <Link
                             to="/dashboard"
-                            className={`block px-4 py-2 rounded-md ${location.pathname === '/dashboard' ? 'bg-blue-600' : 'hover:bg-gray-600'}`}
+                            className={`block px-4 py-2 font-semibold rounded-md ${location.pathname === '/dashboard' ? 'bg-[#A21D3C]' : 'hover:bg-gray-600'}`}
                         >
                             Details
                         </Link>
@@ -23,8 +23,8 @@ const Sidebar = () => {
                 </ul>
             </div>
             {/* Menu Button */}
-            <div className="visible lg:hidden p-6" onClick={() => setIsOpen(true)}>
-                <GrMenu className="text-lg cursor-pointer" />
+            <div className="visible lg:hidden md:pt-6 md:pl-6 pt-4 pl-4" onClick={() => setIsOpen(true)}>
+                <GrMenu className="md:text-lg cursor-pointer" />
             </div>
             {/* Overlay */}
             {isOpen && (
@@ -50,11 +50,11 @@ const Sidebar = () => {
                 </button>
 
                 {/* Sidebar Links */}
-                <ul className="space-y-2 mt-6">
+                <ul className="space-y-2 mt-10">
                     <li>
                         <Link
                             to="/dashboard"
-                            className={`block px-4 py-2 rounded-md ${location.pathname === "/dashboard" ? "bg-blue-600" : "hover:bg-gray-600"
+                            className={`block px-4 py-2 font-semibold rounded-md ${location.pathname === "/dashboard" ? "bg-[#A21D3C]" : "hover:bg-gray-600"
                                 }`}
                         >
                             Details

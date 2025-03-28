@@ -76,14 +76,14 @@ const DataTable = () => {
 
 
     return (
-        <div className="p-6">
-            <div className="mb-4">
+        <div className="md:p-6 p-4">
+            <div className="md:mb-4 mb-2">
                 <input
                     type="text"
                     placeholder="Search..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="xl:w-3/4 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 lg:py-2 py-[6px] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#A21D3C]"
                 />
             </div>
             <div className="overflow-x-auto shadow-md w-full bg-white rounded-lg">
@@ -91,7 +91,7 @@ const DataTable = () => {
                     <thead className="bg-[#A21D3C] text-white w-full">
                         <tr className='flex flex-row items-center justify-between w-full'>
                             <th
-                                className="w-[10%] px-6 xl:py-6 lg:py-4 text-left text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="w-[10%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                                 onClick={() => requestSort("id")}
                             >
                                 <div className="flex items-center">
@@ -102,7 +102,7 @@ const DataTable = () => {
                                 </div>
                             </th>
                             <th
-                                className="xl:w-[25%] lg:w-[24%] px-6 xl:py-6 lg:py-4 text-left text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="xl:w-[25%] w-[24%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                                 onClick={() => requestSort('title')}
                             >
                                 <div className="flex items-center">
@@ -113,7 +113,7 @@ const DataTable = () => {
                                 </div>
                             </th>
                             <th
-                                className="w-[50%] px-6 xl:py-6 lg:py-4 text-left text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="w-[50%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                                 onClick={() => requestSort('body')}
                             >
                                 <div className="flex items-center">
@@ -125,7 +125,7 @@ const DataTable = () => {
                             </th>
 
                             <th
-                                className="xl:w-[15%] lg:w-[16%] px-6 xl:py-6 lg:py-4 text-left text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="xl:w-[15%] w-[16%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                                 onClick={() => requestSort('userId')}
                             >
                                 <div className="flex items-center">
@@ -140,16 +140,16 @@ const DataTable = () => {
                     <tbody className="bg-white divide-y divide-gray-200">
                         {currentItems?.length > 0 ? (
                             currentItems?.map(item => (
-                                <tr key={item?.id} className="hover:bg-gray-50 flex flex-row justify-between">
-                                    <td className="w-[10%] px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item?.id}</td>
-                                    <td className="xl:w-[25%] lg:w-[24%] px-6 py-4 text-sm font-medium text-gray-900">{item?.title}</td>
-                                    <td className="w-[50%] px-6 py-4 text-sm text-gray-500">{item?.body}</td>
-                                    <td className="xl:w-[15%] lg:w-[16%] px-6 py-4 text-sm text-gray-500">{item?.userId}</td>
+                                <tr key={item?.id} className="hover:bg-gray-50 flex flex-row justify-between md:gap-0 gap-1">
+                                    <td className="w-[10%] md:px-6 px-[10px] py-4 whitespace-nowrap md:text-sm text-xs text-gray-500">{item?.id}</td>
+                                    <td className="xl:w-[25%] w-[24%] md:px-6 px-[10px] py-4 md:text-sm text-xs font-medium text-gray-900">{item?.title}</td>
+                                    <td className="w-[50%] md:px-6 px-[10px] py-4 md:text-sm text-xs text-gray-500">{item?.body}</td>
+                                    <td className="xl:w-[15%] w-[16%] md:px-6 px-[10px] py-4 md:text-sm text-xs text-gray-500">{item?.userId}</td>
                                 </tr>
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="4" className="px-6 py-4 h-92 font-semibold text-center text-sm text-gray-500">No data found</td>
+                                <td colSpan="4" className="md:px-6 px-0 py-4 h-92 font-semibold text-center text-sm text-gray-500">No data found</td>
                             </tr>
                         )}
                     </tbody>
@@ -157,11 +157,11 @@ const DataTable = () => {
             </div>
             {/* Pagination */}
             {currentItems?.length > 0 && (
-                <div className="flex justify-center items-center gap-2 xl:mt-10 lg:mt-8 mt-4 mb-8">
+                <div className="flex justify-center items-center md:gap-2 gap-1 xl:mt-10 lg:mt-8 md:mt-12 mt-8 mb-8">
                     <button
                         onClick={handlePrev}
                         disabled={startPage === 1}
-                        className="mr-4 lg:w-8 lg:h-8 w-7 h-7 font-bold flex justify-center items-center rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50"
+                        className="md:mr-4 mr-2 w-8 h-8 font-bold flex justify-center items-center rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50"
                     >
                         <FaAngleLeft />
                     </button>
@@ -171,7 +171,7 @@ const DataTable = () => {
                             <button
                                 key={number}
                                 onClick={() => paginate(number)}
-                                className={`flex items-center justify-center px-3 py-2 font-semibold text-sm/none rounded-md ${currentPage === number ? "bg-[#A21D3C] text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                                className={`flex items-center justify-center px-3 py-2 font-semibold md:text-sm/none text-xs/none rounded-md ${currentPage === number ? "bg-[#A21D3C] text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                                     }`}
                             >
                                 {number}
@@ -182,9 +182,9 @@ const DataTable = () => {
                     <button
                         onClick={handleNext}
                         disabled={startPage + maxVisiblePages - 1 >= totalPages}
-                        className="ml-4 lg:w-8 lg:h-8 w-7 h-7 font-bold flex justify-center items-center rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50"
+                        className="md:ml-4 ml-2 w-8 h-8 font-bold flex justify-center items-center rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50"
                     >
-                        <FaAngleRight />
+                        <FaAngleRight  />
                     </button>
                 </div>
             )}

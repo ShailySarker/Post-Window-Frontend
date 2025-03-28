@@ -7,11 +7,11 @@ const MainLayout = () => {
     return (
         <div className='flex flex-col h-screen'>
             <Navbar />
-            <div className='flex flex-row w-full h-full'>
+            <div className='flex md:flex-row flex-col w-full h-full'>
                 <div className='xl:w-1/5 h-full'>
                     <Sidebar />
                 </div>
-                <div className='w-4/5 h-full'>
+                <div className='lg:w-4/5 w-full h-full'>
                     <Outlet />
                 </div>
             </div>

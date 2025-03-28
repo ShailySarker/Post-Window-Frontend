@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { logout } from '../redux/actions/authActions';
+import { deleteAccount, logout } from '../redux/actions/authActions';
+import { MdPostAdd } from 'react-icons/md';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -23,10 +24,10 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <div className="text-xl font-bold">Dashboard</div>
+      <div className="xl:text-xl md:text-lg md:font-bold font-semibold flex gap-2 items-center"><MdPostAdd className='xl:text-3xl md:text-2xl text-xl'/>Post Window</div>
       <div className="relative">
         <div 
-          className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center cursor-pointer"
+          className="md:w-10 w-8 md:h-10 h-8 md:text-base text-sm font-semibold bg-[#A21D3C] rounded-full flex items-center justify-center cursor-pointer"
           onClick={() => setDropdownOpen(!dropdownOpen)}
         >
           {user?.name?.charAt(0) || 'U'}

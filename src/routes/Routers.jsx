@@ -1,6 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import LandingPage from '../pages/LandingPage/LandingPage';
+import DashboardPage from '../pages/DashboardPage/DashboardPage';
+import MainLayout from '../layouts/MainLayout';
+import Login from '../pages/Login/Login';
+import LoginPage from '../pages/LoginPage/LoginPage';
 
 const Routers = () => {
     return (
@@ -9,16 +13,16 @@ const Routers = () => {
                 index
                 element={<LandingPage />}
             />
-            {/* <Route
+            <Route
                 path="/"
-                element={<MainLayouts />}
+                element={<MainLayout />}
             >
                 <Route
-                    path="/posts"
-                    element={<Posts />}
+                    path="/dashboard"
+                    element={<DashboardPage />}
                 />
-                <Route path="/post/:id" element={<PostDetails />} />
-            </Route> */}
+            </Route>
+            <Route path="/login" element={<LoginPage />} />
         </Routes>
     );
 };

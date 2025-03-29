@@ -1,12 +1,86 @@
-# React + Vite
+# Project Name: Post Window Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Website Link:
+hhttps://post-window-frontend.vercel.app/
 
-Currently, two official plugins are available:
+# Technologies:
+JavaScript, Tailwind CSS, ReactJS, React Router, Redux, Axios, Local-Storage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Objective 
+Build a React.js/Next.js application with user authentication and a dashboard data table with filtering and sorting. 
 
-## Expanding the ESLint configuration
+# Pages & Structure
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application will have two main pages: 
+
+1. Login/Signup Page – Allows users to sign up or log in with email and password. 
+
+2. Details Page – Displays a data table along with a navbar and sidebar after login. 
+
+# Requirements 
+
+1. User Authentication (Login/Signup) 
+
+○ Create a login/signup system with email & password authentication. 
+
+○ Validate input fields and display error messages for invalid inputs.
+
+○ Store user session details in local storage. 
+
+○ Redirect users to the Details page after successful login. 
+
+2. Dashboard (After Login) 
+
+○ Display a navbar with: 
+
+■ Logo (left) 
+
+■ User icon (right) with dropdown menu:
+
+■ Logo (left) 
+
+■ User icon (right) with dropdown menu: 
+
+■ Show logged-in user details (name/email).
+
+■ Logout option (clears local storage). 
+
+■ Delete Account option (removes user data from local storage). 
+
+○ Show a sidebar indicating the current page - (let’s name it as Details).
+
+
+3. Details Page (Data Table)
+
+○ Display a table with mock data (use JSON or a third party mock APIs).
+
+○ Implement the following table features: 
+
+■ Sorting (ascending/descending). 
+
+■ Searching (filter data based on user input). 
+
+■ Pagination (display a limited number of rows per page). 
+
+
+4. General Requirements 
+
+○ Use local storage for user authentication and session management. 
+
+○ Ensure responsive design for both desktop and mobile. 
+
+○ State Management: Use useContext or useReducer for managing state (recommended), or you may use Redux if preferred.
+
+# Run
+
+# Clone this repository
+$ git clone https://github.com/ShailySarker/Post-Window-Frontend  
+
+# Go into the repository
+$ cd Post-Window-Frontend
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev

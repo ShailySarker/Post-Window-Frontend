@@ -11,7 +11,7 @@ Build a React.js/Next.js application with user authentication and a dashboard da
 
 # Pages & Structure
 
-The application will have two main pages: 
+** The application will have two main pages: **
 
 1. Login/Signup Page – Allows users to sign up or log in with email and password. 
 
@@ -19,7 +19,7 @@ The application will have two main pages:
 
 # Requirements 
 
-1. User Authentication (Login/Signup) 
+## 1. User Authentication (Login/Signup) 
 
 ○ Create a login/signup system with email & password authentication. 
 

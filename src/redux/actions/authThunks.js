@@ -42,7 +42,7 @@ export const signup = (email, password, name) => async (dispatch) => {
 
     const allUsers = getAllUsers();
 
-    if (allUsers.some(user => user.email === email)) {
+    if (allUsers.some(user => user?.email === email)) {
       throw new Error('Email already exists');
     }
 
@@ -75,7 +75,7 @@ export const login = (email, password) => async (dispatch) => {
     dispatch(loginStart());
 
     const allUsers = getAllUsers();
-    const user = allUsers.find(u => u.email === email && u.password === password);
+    const user = allUsers.find(u => u?.email === email && u?.password === password);
 
     if (!user) {
       throw new Error('Invalid email or password');
@@ -104,7 +104,7 @@ export const logout = () => async (dispatch) => {
 
 // Delete account function
 export const deleteAccount = (userId) => async (dispatch) => {
-  const allUsers = getAllUsers().filter(user => user.id !== userId);
+  const allUsers = getAllUsers().filter(user => user?.id !== userId);
   saveAllUsers(allUsers);
 
   const currentUser = JSON.parse(localStorage.getItem(CURRENT_USER_KEY));

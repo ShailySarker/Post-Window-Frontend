@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { signup } from '../../../redux/actions/authActions';
+import { signup } from '../../../redux/actions/authThunks';
+// import { signup } from '../../../redux/actions/authActions';
 
 const SignUp = ({ switchToLogin }) => {
     const [name, setName] = useState('');
@@ -11,11 +12,23 @@ const SignUp = ({ switchToLogin }) => {
     const { loading, error } = useSelector(state => state?.auth);
     const navigate = useNavigate();
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     await dispatch(signup(email, password, name));
+    //     localStorage.getItem('allUsers');
+    //     localStorage.getItem('currentUser')
+    //     navigate('/dashboard');
+    // };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await dispatch(signup(email, password, name));
-        navigate('/dashboard');
+        const result = await dispatch(signup(email, password, name));
+
+        if (result?.success) {
+            navigate('/dashboard'); // Redirect after successful signup
+        }
     };
+
 
     return (
         <div className="max-w-md w-full mx-auto mt-10 bg-white p-8 rounded-lg shadow-md">

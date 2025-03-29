@@ -1,7 +1,7 @@
 # Project Name: Post Window Website
 
 # Website Link:
-hhttps://post-window-frontend.vercel.app/
+https://post-window-frontend.vercel.app/
 
 # Technologies:
 JavaScript, Tailwind CSS, ReactJS, React Router, Redux, Axios, Local-Storage.

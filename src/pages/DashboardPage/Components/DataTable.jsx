@@ -82,7 +82,7 @@ const DataTable = () => {
                     type="text"
                     placeholder="Search..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => setSearchTerm(e?.target?.value)}
                     className="w-full px-4 lg:py-2 py-[6px] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#A21D3C]"
                 />
             </div>
@@ -91,7 +91,7 @@ const DataTable = () => {
                     <thead className="bg-[#A21D3C] text-white w-full">
                         <tr className='flex flex-row items-center justify-between w-full'>
                             <th
-                                className="w-[10%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="w-[10%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100 hover:text-black"
                                 onClick={() => requestSort("id")}
                             >
                                 <div className="flex items-center">
@@ -102,7 +102,7 @@ const DataTable = () => {
                                 </div>
                             </th>
                             <th
-                                className="xl:w-[25%] w-[24%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="xl:w-[25%] w-[24%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100 hover:text-black"
                                 onClick={() => requestSort('title')}
                             >
                                 <div className="flex items-center">
@@ -113,7 +113,7 @@ const DataTable = () => {
                                 </div>
                             </th>
                             <th
-                                className="w-[50%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="w-[50%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100 hover:text-black"
                                 onClick={() => requestSort('body')}
                             >
                                 <div className="flex items-center">
@@ -125,7 +125,7 @@ const DataTable = () => {
                             </th>
 
                             <th
-                                className="xl:w-[15%] w-[16%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                className="xl:w-[15%] w-[16%] md:px-6 px-[10px] xl:py-6 lg:py-4 md:py-5 py-4 text-left md:text-xs text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-100 hover:text-black"
                                 onClick={() => requestSort('userId')}
                             >
                                 <div className="flex items-center">

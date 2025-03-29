@@ -9,7 +9,7 @@ JavaScript, Tailwind CSS, ReactJS, React Router, Redux, Axios, Local-Storage.
 # Objective 
 A modern React.js application featuring secure user authentication and an interactive dashboard with advanced data table functionality for filtering and sorting.
 
-# ✨ Features
+# Features
 
 - **🔐 Secure Authentication**
   - User login/signup with form validation

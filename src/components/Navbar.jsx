@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
-// import { deleteAccount, logout } from '../redux/actions/authActions';
 import { MdPostAdd } from 'react-icons/md';
 import { deleteAccount, logout } from '../redux/actions/authThunks';
-// import { deleteAccount, logout } from '../redux/actions/authThunks';
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { user } = useSelector(state => state?.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log("User:", user)
 
-    const handleLogout = async () => {
+  const handleLogout = async () => {
     await dispatch(logout());
     navigate('/authentication');
   };
